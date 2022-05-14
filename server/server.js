@@ -4,9 +4,8 @@ const app = express()
 
 
 /*
-  请求地址： http://localhost:3000/search/users?q=aa
+  request address： http://localhost:3000/search/users?q=aa
 
-  后台路由
     key： /search/users
     value： function () {}
 */

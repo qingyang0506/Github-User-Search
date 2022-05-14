@@ -90,9 +90,9 @@ app.get("/search/users2", function (req, res) {
 
 app.listen(8003, "localhost", (err) => {
   if (!err){
-  	console.log("服务器启动成功")
-  	console.log("请求github真实数据请访问：http://localhost:8003/search/users")
-  	console.log("请求本地模拟数据请访问：http://localhost:8003/search/users2")
+  	console.log("server start successful")
+  	console.log("To request real github data please visit：http://localhost:8003/search/users")
+  	console.log("To request local simulation data please visit：http://localhost:8003/search/users2")
   } 
   else console.log(err);
 })

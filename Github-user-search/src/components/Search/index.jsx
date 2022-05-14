@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './index.css'
 import axios from 'axios'
+import PubSub from 'pubsub-js'
 
 export default class Search extends Component {
     render() {
@@ -17,12 +18,14 @@ export default class Search extends Component {
 
     search = ()=>{
         const {input1:{value:keyWord}} = this;
-        this.props.updateAppState({isLoading:true,isFirst:false});
+        PubSub.publish('atguigu',{isLoading:true,isFirst:false})
         axios.get(`http://localhost:3000/api1/search/users?q=${keyWord}`).then(value=>{
-            this.props.updateAppState({isLoading:false,users:value.data.items});
+            PubSub.publish('atguigu',{isLoading:false,users:value.data.items})
         },error=>{
-            this.props.updateAppState({isLoading:false,err:error.message})
+            PubSub.publish('atguigu',{isLoading:false,err:error.message})
         })
+
+       
     }
 
     handleKeyUp= (event)=>{

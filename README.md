@@ -24,7 +24,7 @@ if you see server start successful that means correct
 npm/yarn start
 ```
 
-if there not worked, execute the followint command
+if there not worked, execute the following command first
 ```
 npm i -S react-scripts
 ```

@@ -14,8 +14,9 @@ Using the React to Build a simple Web page to search the Github Users.
 ```
 npm/yarn start
 ```
+if you see server start successful that means correct
 
-4.start another terminal and direct into the memo folder
+4.start another terminal and direct into the Github-user-search folder
 
 5.Then execute the following command
 
@@ -23,5 +24,11 @@ npm/yarn start
 npm/yarn start
 ```
 
-6.Your brower will open automatically
+if there not worked, execute the followint command
+```
+npm i -S react-scripts
+```
+Then run `npm/yarn start` again.
+
+6.Your brower will open automatically(if not open automatically,there will show a url in terminal,you just copy it and open in your brower)
 
